@@ -13,5 +13,5 @@ let connection = mysql.createConnection({
 connection.connect((err)=>{
     if(err) {throw err;}
     console.log('MySQL now connected...');
-
 });
+
