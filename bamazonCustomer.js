@@ -18,9 +18,9 @@ connection.connect((err)=>{
     InquireItems();
 });
 
+// give the users an option for viewing items
 function InquireItems(){
 console.log("Welcome to Bamazon.\n The following is our current store selection:");
-connection.query = "SELECT * from products";
 inquirer.prompt([
     {type: "list",
     name: "viewOptions",
