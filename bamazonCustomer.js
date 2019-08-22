@@ -32,6 +32,7 @@ inquirer.prompt([
         ]
     }
 ]). then(answer=>{
+    //switch case in order to parse out user's want of viewing products
     switch(answer.action){
         case "View all items by categories:":
             categories();
