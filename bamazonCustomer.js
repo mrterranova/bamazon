@@ -13,5 +13,14 @@ let connection = mysql.createConnection({
 connection.connect((err)=>{
     if(err) {throw err;}
     console.log('MySQL now connected...');
+    inquireItems();
 });
 
+function inquireItems(){
+console.log("Welcome to Bamazon.\n\nClick to view any of the following:");
+
+inquirer.prompt([
+    type: "list"
+    
+])
+};
