@@ -1,3 +1,4 @@
+// adding appropriate connections to the products
 let mysql = require('mysql');
 let inquirer = require('inquirer');
 
@@ -10,6 +11,7 @@ let connection = mysql.createConnection({
     database: 'bamazon'
 });
 
+//create conection to mysql
 connection.connect((err)=>{
     if(err) {throw err;}
     console.log('MySQL now connected...');
