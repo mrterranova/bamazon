@@ -17,10 +17,12 @@ connection.connect((err)=>{
 });
 
 function inquireItems(){
-console.log("Welcome to Bamazon.\n\nClick to view any of the following:");
-
+console.log("Welcome to Bamazon.\n The following is our current store selection:");
+connection.query = "SELECT * "
 inquirer.prompt([
-    type: "list"
+    type: "list",
+    name: "viewOptions",
+    message: "What would you like to locate?"
     
 ])
 };
