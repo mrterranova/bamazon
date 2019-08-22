@@ -41,5 +41,20 @@ inquirer.prompt([
             exit();
     }
 });
-}
+};
+
+function categories(){
+
+};
+
+function prices(){
+
+};
+
+function items(){
+
+};
+function exit(){
+
+};
 
