@@ -46,17 +46,22 @@ inquirer.prompt([
 });
 };
 
+// view items in categories
 function categories(){
 
 };
 
+//view items in range of certain prices
 function prices(){
 
 };
 
+//view all items
 function items(){
 
 };
+
+// exit store application
 function exit(){
 
 };
