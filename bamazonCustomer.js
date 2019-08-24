@@ -22,16 +22,11 @@ function readDB(){
     connection.query("SELECT * FROM products", function(err, res){
         if (err) throw err;
         // console.log(res.RowDataPacket.product_name);
-        res.map(semiResponse=>{
-            console.log(semiResponse.item_id*2);
-        });
-        res.filter(semiResponse=>{
-            console.log(`${semiResponse.item_id<5} >>> acutal id ${semiResponse.item_id}`);
-            if(semiResponse.item_id <5){
-                console.log(semiResponse.item_id);
-            }
-        })
-    })
+        for (var i=0; i< res.length; i++){
+            console.log(res[i].item)
+        }
+        
+    });
 }
 
 // give the users an option for viewing items
