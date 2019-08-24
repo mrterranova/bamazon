@@ -76,22 +76,15 @@ function items(){
         name: "purchase",
         message: "What would you like to purchase? [Press 'Q' to exit.]"
         }
-    ]). then(answer=>{
-        //switch case in order to parse out user's want of viewing products
-        switch(answer.purchase){
-            case "View all items by department:":
-                categories();
-                break;
-            case "View all items by within a certain price range:":
-                prices();
-                break;
-            case "Make a purchase on an item above:":
-                items();
-                break;
-            case "Exit:":
-                exit();
-                break;
+    ]). then(userAnswer=>{
+      var correct = false;
+      for(var i=0; i<res.length; i++){
+        if (res[i].productname==userAnswer.purchase){
+            correct = true;
+            var product = userAnswer.purchase;
+            var id = i;
         }
+      }
     });
 };
 
