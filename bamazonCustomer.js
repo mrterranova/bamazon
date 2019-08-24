@@ -104,7 +104,7 @@ function items(){
                         makeTable();
                     })
                 } else {
-                    console.log("Not a valid selection!");
+                    console.log("Not a valid selection.");
                     promptCustomer(res);
                 }
             })
