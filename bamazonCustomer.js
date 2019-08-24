@@ -36,7 +36,7 @@ function CustomerOptions(){
     inquirer.prompt([
         {type: "list",
         name: "viewOptions",
-        message: "What would you like to locate?",
+        message: "What would you like to do?",
         choices: ["View all items by department:",
             "View all items by within a certain price range:",
             "Make a purchase on an item above:",
