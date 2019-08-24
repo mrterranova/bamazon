@@ -74,7 +74,31 @@ function prices(){
 
 //view all items
 function items(){
-    console.log("\nReady to purchase an item?\n Please select which item you would like:\n`````````````````````````````````\n");
+    console.log("\nReady to purchase an item?\n Please select which item you would like from above:\n`````````````````````````````````\n");
+    inquirer.prompt([
+        {type: "input",
+        name: "purchase",
+        message: "What would you like to purchase? [Press 'Q' to exit.]",
+        choices: [
+            ]
+        }
+    ]). then(answer=>{
+        //switch case in order to parse out user's want of viewing products
+        switch(answer.purchase){
+            case "View all items by department:":
+                categories();
+                break;
+            case "View all items by within a certain price range:":
+                prices();
+                break;
+            case "Make a purchase on an item above:":
+                items();
+                break;
+            case "Exit:":
+                exit();
+                break;
+        }
+    });
 };
 
 // exit store application
