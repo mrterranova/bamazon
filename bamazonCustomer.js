@@ -23,7 +23,7 @@ function readDB(){
         if (err) throw err;
         // console.log(res.RowDataPacket.product_name);
         for (var i=0; i< res.length; i++){
-            console.log("\n"+ res[i].item_id + " || "+ res[i].product_name+ " || "+ res[i].department_name+ " || "+ res[i].price+ " || "+res[i].stock_quantity+"\n\n");
+            console.log("\n"+ res[i].item_id + " ||\t"+ res[i].product_name+ " ||\t"+ res[i].department_name+ " ||\t"+ res[i].price+ " ||\t"+res[i].stock_quantity+"\n");
         }
         
     });
