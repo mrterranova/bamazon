@@ -14,13 +14,32 @@ let connection = mysql.createConnection({
 //create conection to mysql
 connection.connect((err)=>{
     if(err) {throw err;}
-    console.log('MySQL now connected...');
-    InquireItems();
+    console.log('You are now connected to bamazon...');
+    readDB();
+    //InquireItems();
 });
+function readDB(){
+    connection.query("SELECT * FROM products", function(err, res){
+        if (err) throw err;
+        // console.log(res.RowDataPacket.product_name);
+        res.map(semiResponse=>{
+            console.log(semiResponse.item_id*2);
+        });
+        res.filter(semiResponse=>{
+            console.log(`${semiResponse.item_id<5} >>> acutal id ${semiResponse.item_id}`);
+            if(semiResponse.item_id <5){
+                console.log(semiResponse.item_id);
+            }
+        })
+    })
+}
 
 // give the users an option for viewing items
 function InquireItems(){
 console.log("Welcome to Bamazon.\n The following is our current store selection:");
+
+
+
 inquirer.prompt([
     {type: "list",
     name: "viewOptions",
