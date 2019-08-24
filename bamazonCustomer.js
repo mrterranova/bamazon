@@ -77,14 +77,40 @@ function items(){
         message: "What would you like to purchase? [Press 'Q' to exit.]"
         }
     ]). then(userAnswer=>{
-      var correct = false;
-      for(var i=0; i<res.length; i++){
+      let correct = false;
+      for(let i=0; i<res.length; i++){
         if (res[i].productname==userAnswer.purchase){
             correct = true;
-            var product = userAnswer.purchase;
-            var id = i;
+            let product = userAnswer.purchase;
+            let id= i;
+            inquirer.prompt([
+                {
+                    type: "input",
+                    name: "quantityItem",
+                    message: "Quantity of "+ userAnswer.purchase, 
+                    validate: function(value){
+                        if (isNaN(value)==false){
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+
+                }
+            ]).then(function(answer){
+                if ((res[id].stock_quantity.answer.quantityItem)>0){
+                    connection.query("UPDATE products SET stock_quantity ='"+(res[id].stock_quantity-answer.quantityItem)+"' WHERE product_name='"+product+"'",function(err, res2){
+                        console.log("Product Purchased");
+                        makeTable();
+                    })
+                } else {
+                    console.log("Not a valid selection!");
+                    promptCustomer(res);
+                }
+            })
         }
       }
+
     });
 };
 
