@@ -26,38 +26,41 @@ function InquireItems(){
         for (var i=0; i< res.length; i++){
             console.log(res[i].item_id + "\t||\t"+ res[i].product_name+ " || "+ res[i].department_name+ " || "+ res[i].price+ " || "+res[i].stock_quantity+"\n");
         }  
-        inquirer.prompt([
-            {type: "list",
-            name: "viewOptions",
-            message: "What would you like to locate?",
-            choices: ["View all items by categories:",
-                "View all items by within a certain price range:",
-                "View all items in store:",
-                "Exit:"
-                ]
-            }
-        ]). then(answer=>{
-            //switch case in order to parse out user's want of viewing products
-            switch(answer.action){
-                case "View all items by categories:":
-                    categories();
-                case "View all items by within a certain price range:":
-                    prices();
-                case "View all items in store:":
-                    items();
-                case "Exit:":
-                    exit();
-            }
-        });
+        CustomerOptions();
     });
-}
+};
 
 // give the users an option for viewing items
+function CustomerOptions(){
 
+    inquirer.prompt([
+        {type: "list",
+        name: "viewOptions",
+        message: "What would you like to locate?",
+        choices: ["View all items by categories:",
+            "View all items by within a certain price range:",
+            "View all items in store:",
+            "Exit:"
+            ]
+        }
+    ]). then(answer=>{
+        //switch case in order to parse out user's want of viewing products
+        switch(answer.action){
+            case "View all items by categories: ":
+                categories();
+            case "View all items by within a certain price range: ":
+                prices();
+            case "Make a purchase on an item above: ":
+                items();
+            case "Exit:":
+                exit();
+        }
+    });
+};
 
 // view items in categories
 function categories(){
-
+    
 };
 
 //view items in range of certain prices
