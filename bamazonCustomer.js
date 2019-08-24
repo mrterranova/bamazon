@@ -57,7 +57,6 @@ function CustomerOptions(){
         }
     });
 };
-
 // view items in categories
 function categories(){
     console.log("\nPlease select a department:\n`````````````````````````````````\n");
