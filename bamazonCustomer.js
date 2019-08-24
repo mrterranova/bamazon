@@ -38,7 +38,6 @@ function CustomerOptions(){
         name: "viewOptions",
         message: "What would you like to do?",
         choices: ["View all items by department:",
-            "View all items by within a certain price range:",
             "Make a purchase on an item above:",
             "Exit:"
             ]
@@ -46,11 +45,8 @@ function CustomerOptions(){
     ]). then(answer=>{
         //switch case in order to parse out user's want of viewing products
         switch(answer.viewOptions){
-            case "View all items by department:":
+            case "View all items in a specific department:":
                 categories();
-                break;
-            case "View all items by within a certain price range:":
-                prices();
                 break;
             case "Make a purchase on an item above:":
                 items();
