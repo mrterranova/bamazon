@@ -64,7 +64,7 @@ function CustomerOptions(){
 
 // view items in categories
 function categories(){
-    // console.log("Please select a department: ");
+    console.log("\nPlease select a department: ");
 };
 
 //view items in range of certain prices
