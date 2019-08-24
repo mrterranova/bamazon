@@ -52,7 +52,7 @@ function CustomerOptions(){
                 prices();
             case "Make a purchase on an item above: ":
                 items();
-            case "Exit:":
+            case "Exit: ":
                 exit();
         }
     });
@@ -60,7 +60,7 @@ function CustomerOptions(){
 
 // view items in categories
 function categories(){
-    console.log("Please select a department: ");
+    // console.log("Please select a department: ");
 };
 
 //view items in range of certain prices
