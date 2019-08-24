@@ -69,16 +69,16 @@ function categories(){
 
 //view items in range of certain prices
 function prices(){
-    console.log ("Please select a price range: ");
+    console.log ("\nPlease select a price range: ");
 };
 
 //view all items
 function items(){
-    console.log("Ready to purchase an item?\n Please select which item you would like: ");
+    console.log("\nReady to purchase an item?\n Please select which item you would like: ");
 };
 
 // exit store application
 function exit(){
-    console.log("Thank you for visiting bamazon! We hope that you will return!");
+    console.log("\nThank you for visiting bamazon! We hope that you will return!");
 };
 
