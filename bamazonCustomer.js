@@ -74,9 +74,7 @@ function items(){
     inquirer.prompt([
         {type: "input",
         name: "purchase",
-        message: "What would you like to purchase? [Press 'Q' to exit.]",
-        choices: [
-            ]
+        message: "What would you like to purchase? [Press 'Q' to exit.]"
         }
     ]). then(answer=>{
         //switch case in order to parse out user's want of viewing products
