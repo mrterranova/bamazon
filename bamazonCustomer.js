@@ -37,7 +37,7 @@ function CustomerOptions(){
         {type: "list",
         name: "viewOptions",
         message: "What would you like to locate?",
-        choices: ["View all items by categories:",
+        choices: ["View all items by department:",
             "View all items by within a certain price range:",
             "Make a purchase on an item above:",
             "Exit:"
@@ -45,15 +45,19 @@ function CustomerOptions(){
         }
     ]). then(answer=>{
         //switch case in order to parse out user's want of viewing products
-        switch(answer.action){
-            case "View all items by categories:":
+        switch(answer.viewOptions){
+            case "View all items by department:":
                 categories();
+                break;
             case "View all items by within a certain price range:":
                 prices();
+                break;
             case "Make a purchase on an item above:":
                 items();
+                break;
             case "Exit:":
                 exit();
+                break;
         }
     });
 };
