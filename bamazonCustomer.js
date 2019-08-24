@@ -62,11 +62,6 @@ function categories(){
     console.log("\nPlease select a department:\n`````````````````````````````````\n");
 };
 
-//view items in range of certain prices
-function prices(){
-    console.log ("\nPlease select a price range:\n`````````````````````````````````\n");
-};
-
 //view all items
 function items(){
     console.log("\nReady to purchase an item?\n Please select which item you would like from above:\n`````````````````````````````````\n");
