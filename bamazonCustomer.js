@@ -64,21 +64,21 @@ function CustomerOptions(){
 
 // view items in categories
 function categories(){
-    console.log("\nPlease select a department: ");
+    console.log("\nPlease select a department:\n`````````````````````````````````\n");
 };
 
 //view items in range of certain prices
 function prices(){
-    console.log ("\nPlease select a price range: ");
+    console.log ("\nPlease select a price range:\n`````````````````````````````````\n");
 };
 
 //view all items
 function items(){
-    console.log("\nReady to purchase an item?\n Please select which item you would like: ");
+    console.log("\nReady to purchase an item?\n Please select which item you would like:\n`````````````````````````````````\n");
 };
 
 // exit store application
 function exit(){
-    console.log("\nThank you for visiting bamazon! We hope that you will return!");
+    console.log("\nThank you for visiting bamazon! We hope that you will return!\n");
 };
 
