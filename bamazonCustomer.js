@@ -66,9 +66,10 @@ function categories(){
 function items(){
     console.log("\nReady to purchase an item?\n Please select which item you would like from above:\n`````````````````````````````````\n");
     inquirer.prompt([
-        {type: "input",
-        name: "purchase",
-        message: "What would you like to purchase? [Press 'Q' to exit.]"
+        {
+            type: "input",
+            name: "purchase",
+            message: "What would you like to purchase? [Press 'Q' to exit.]"
         }
     ]). then(userAnswer=>{
       let correct = false;
