@@ -36,11 +36,11 @@ function CustomerOptions(){
     inquirer.prompt([
         {type: "list",
         name: "viewOptions",
-        message: "What would you like to locate?",
-        choices: ["View all items by categories:",
-            "View all items by within a certain price range:",
-            "View all items in store:",
-            "Exit:"
+        message: "What would you like to locate? ",
+        choices: ["View all items by categories: ",
+            "View all items by within a certain price range: ",
+            "View all items in store: ",
+            "Exit: "
             ]
         }
     ]). then(answer=>{
@@ -60,21 +60,21 @@ function CustomerOptions(){
 
 // view items in categories
 function categories(){
-    
+    console.log("Please select a department: ");
 };
 
 //view items in range of certain prices
 function prices(){
-
+    console.log ("Please select a price range: ");
 };
 
 //view all items
 function items(){
-
+    console.log("Ready to purchase an item?\n Please select which item you would like: ");
 };
 
 // exit store application
 function exit(){
-
+    console.log("Thank you for visiting bamazon! We hope that you will return!");
 };
 
